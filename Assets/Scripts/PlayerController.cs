@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System;
 using UnityEngine;
-using TMPro;
+using UnityEngine.UI;
 
 
 public class PlayerController : MonoBehaviour
@@ -15,7 +15,7 @@ public class PlayerController : MonoBehaviour
     private bool faceRightState = true;
     private bool onGroundState = true;
     public Transform enemyLocation;
-    public TextMeshProUGUI scoreText;
+    public Text scoreText;
     private int score = 0;
     private bool countScoreState = false;
  
