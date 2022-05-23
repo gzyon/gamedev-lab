@@ -7,17 +7,21 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    public float speed;
-    public float maxSpeed = 10;
-    public float upSpeed = 10;
+
     private Rigidbody2D mario;
+    private int score = 0;
+    private bool countScoreState = false;
     private SpriteRenderer marioSprite;
     private bool faceRightState = true;
     private bool onGroundState = true;
+
+    public float speed;
+    public float maxSpeed = 10;
+    public float upSpeed = 10;
     public Transform enemyLocation;
     public Text scoreText;
-    private int score = 0;
-    private bool countScoreState = false;
+    public Text gameOverText;
+    
  
     // Start is called before the first frame update
     void Start()
@@ -92,6 +96,7 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             Debug.Log("Collided with Goomba!");
+            gameOverText.gameObject.SetActive(true);
         }
     }
 }
