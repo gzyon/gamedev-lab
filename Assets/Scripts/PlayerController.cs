@@ -122,7 +122,7 @@ public class PlayerController : MonoBehaviour
         }
 
         if (Input.GetKeyDown("space")) {
-            jump.PlayOneShot(impact, 0.7F);
+            // jump.PlayOneShot(impact, 0.7F);
         }
 
         if(!onGroundState && countScoreState){
@@ -147,7 +147,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayJumpSound()
     {
-        // jump.PlayOneShot(impact, 0.7F);
+        jump.PlayOneShot(impact, 0.7F);
         Debug.Log("Mario jump");
     }
  }
