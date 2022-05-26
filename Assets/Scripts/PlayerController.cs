@@ -16,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private SpriteRenderer marioSprite;
     private bool faceRightState = true;
     private bool onGroundState = true;
-    // private bool isMoving = true;
+    private Animator animator;
 
     [Header("Physics")]
     public float speed;
@@ -47,6 +47,7 @@ public class PlayerController : MonoBehaviour
         marioBody = GetComponent<Rigidbody2D>();
         marioSprite = GetComponent<SpriteRenderer>();
         jump = GetComponent<AudioSource>();
+        animator = GetComponent<Animator>();
     }
     
     // Here is where you update the physics
@@ -66,6 +67,7 @@ public class PlayerController : MonoBehaviour
         if(Input.GetKeyDown("space") && onGroundState){
             marioBody.AddForce(Vector2.up * upSpeed, ForceMode2D.Impulse);
             onGroundState = false;
+            animator.SetBool("onGround", onGroundState);
             countScoreState = true; //check if gomb is underneath
         }
         if (!onGroundState) {
@@ -79,9 +81,10 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        Debug.Log("Some collision happened");
+        Debug.Log(col.gameObject.tag);
         if(col.gameObject.CompareTag("Ground")) {
             onGroundState = true;
+            animator.SetBool("onGround", onGroundState);
             countScoreState = false;
             scoreText.text = "Score: " + score.ToString();
         }
@@ -102,9 +105,11 @@ public class PlayerController : MonoBehaviour
     // Here you change the animation and state, not the physics
     void Update()
     {
+        animator.SetFloat("xSpeed", Mathf.Abs(marioBody.velocity.x));
+
         if (Input.GetKeyDown("a") && faceRightState) {                  
-        faceRightState = false;
-        marioSprite.flipX = true;
+            faceRightState = false;
+            marioSprite.flipX = true;
         }
 
         if(Input.GetKeyDown("d") && !faceRightState){
@@ -112,23 +117,11 @@ public class PlayerController : MonoBehaviour
             marioSprite.flipX = false;
         }
 
-        // todo: implement jump animation
-        if(!onGroundState){
-            jump.PlayOneShot(impact, 0.7F);
-            marioSprite.sprite = spriteArray[0];
-        }
-        if(onGroundState){
-            marioSprite.sprite = spriteArray[1];
+        if (Mathf.Abs(marioBody.velocity.x) >  1.0) {
+        	animator.SetTrigger("onSkid");
         }
 
-        if (Input.GetKeyDown("a") || Input.GetKeyDown("d")) {
-            if (onGroundState) {
-                for (int i = 2; i < 5; i++)
-                {
-                    marioSprite.sprite = spriteArray[i];
-                }
-
-            }
+        if (Input.GetKeyDown("space")) {
         }
 
         if(!onGroundState && countScoreState){
@@ -143,9 +136,16 @@ public class PlayerController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Enemy")) {
             jump.PlayOneShot(omona, 0.7F);
+            marioBody.velocity = Vector2.zero;
             gameOverText.gameObject.SetActive(true);
             restartButton.gameObject.SetActive(true);
             marioBody.GetComponent<PlayerController>().enabled = false;
+            animator.enabled = false;
         }
     }
-}
+
+    void PlayJumpSound()
+    {
+        jump.PlayOneShot(impact, 0.7F);
+    }
+ }
