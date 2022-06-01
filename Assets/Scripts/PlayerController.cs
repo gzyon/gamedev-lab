@@ -12,7 +12,6 @@ public class PlayerController : MonoBehaviour
     private int score = 0;
     private bool countScoreState = false;
     private Rigidbody2D marioBody;
-    // public float pushForce = 10;
     private SpriteRenderer marioSprite;
     private bool faceRightState = true;
     private bool onGroundState = true;
@@ -34,9 +33,7 @@ public class PlayerController : MonoBehaviour
     [Header("Game Elements")]
     public AudioClip impact;
     public AudioClip omona;
-    AudioSource die;
     AudioSource jump;
-    public Sprite[] spriteArray;
     public Transform enemyLocation;
 
     // Start is called before the first frame update
@@ -82,7 +79,7 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col){
         Debug.Log(col.gameObject.tag);
-        if(col.gameObject.CompareTag("Ground")) {
+        if(col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("Obstacle") || col.gameObject.CompareTag("PipeTop") || col.gameObject.CompareTag("QuestionBox")) {
             onGroundState = true;
             animator.SetBool("onGround", onGroundState);
             countScoreState = false;
@@ -117,12 +114,8 @@ public class PlayerController : MonoBehaviour
             marioSprite.flipX = false;
         }
 
-        if (Mathf.Abs(marioBody.velocity.x) >  1.0) {
+        if (Mathf.Abs(marioBody.velocity.x) > 1) {
         	animator.SetTrigger("onSkid");
-        }
-
-        if (Input.GetKeyDown("space")) {
-            // jump.PlayOneShot(impact, 0.7F);
         }
 
         if(!onGroundState && countScoreState){
@@ -147,7 +140,7 @@ public class PlayerController : MonoBehaviour
 
     void PlayJumpSound()
     {
-        jump.PlayOneShot(impact, 0.7F);
         Debug.Log("Mario jump");
+        jump.PlayOneShot(impact, 0.7F);
     }
  }

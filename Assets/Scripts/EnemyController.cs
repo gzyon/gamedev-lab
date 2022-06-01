@@ -35,6 +35,15 @@ public class EnemyController : MonoBehaviour
         }
     }
 
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.CompareTag("PipeBottom")) {
+            moveRight *= -1;
+            ComputeVelocity();
+            MoveGomba();
+        }
+    }
+
     void Update()
     {
         if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset) {
