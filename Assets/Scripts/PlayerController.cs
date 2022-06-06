@@ -118,13 +118,13 @@ public class PlayerController : MonoBehaviour
         	animator.SetTrigger("onSkid");
         }
 
-        if(!onGroundState && countScoreState){
-            if(Mathf.Abs(transform.position.x - enemyLocation.position.x) < 0.5f){
-                countScoreState = false;
-                score++;
-                Debug.Log(score);
-            }
-        }
+        // if(!onGroundState && countScoreState){
+        //     if(Mathf.Abs(transform.position.x - enemyLocation.position.x) < 0.5f){
+        //         countScoreState = false;
+        //         score++;
+        //         Debug.Log(score);
+        //     }
+        // }
     }
 
     void OnTriggerEnter2D(Collider2D other) {

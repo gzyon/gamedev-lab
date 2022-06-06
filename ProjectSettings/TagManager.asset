@@ -9,6 +9,9 @@ TagManager:
   - LeftWall
   - RightWall
   - Obstacle
+  - PipeBottom
+  - PipeTop
+  - QuestionBox
   layers:
   - Default
   - TransparentFX
@@ -48,4 +51,7 @@ TagManager:
     locked: 0
   - name: Characters
     uniqueID: 607628789
+    locked: 0
+  - name: Background
+    uniqueID: 1937687981
     locked: 0
