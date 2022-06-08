@@ -9,6 +9,9 @@ TagManager:
   - LeftWall
   - RightWall
   - Obstacle
+  - QuestionBox
+  - PipeTop
+  - PipeBottom
   layers:
   - Default
   - TransparentFX
