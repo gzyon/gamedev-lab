@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKeyDown("a") && faceRightState) {                  
             faceRightState = false;
             marioSprite.flipX = true;
+            Debug.Log(marioSprite.flipX);
         }
 
         if(Input.GetKeyDown("d") && !faceRightState){

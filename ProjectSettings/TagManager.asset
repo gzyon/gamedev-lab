@@ -22,16 +22,16 @@ TagManager:
   - Obstacle
   - QuestionBox
   - Spawned
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - BG1
+  - BG2
+  - BG3
+  - BG4
+  - BG5
+  - BG6
+  - BG7
+  - BG8
+  - BG9
+  - BG10
   - 
   - 
   - 
@@ -46,15 +46,15 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Default
-    uniqueID: 0
-    locked: 0
-  - name: Characters
-    uniqueID: 607628789
+  - name: Background
+    uniqueID: 1937687981
     locked: 0
   - name: Platform
     uniqueID: 55999227
     locked: 0
-  - name: Background
-    uniqueID: 1937687981
+  - name: Characters
+    uniqueID: 607628789
+    locked: 0
+  - name: Default
+    uniqueID: 0
     locked: 0
