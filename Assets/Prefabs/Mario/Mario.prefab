@@ -57,7 +57,7 @@ SpriteRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: a97c105638bdf8b4a8650670310a4cd3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -133,12 +133,6 @@ MonoBehaviour:
   restartButton: {fileID: 0}
   impact: {fileID: 8300000, guid: 75f780d327af2964aacc1972653d56c9, type: 3}
   omona: {fileID: 8300000, guid: 25588d4895d3b8d4ebbd3ed1cab6d314, type: 3}
-  spriteArray:
-  - {fileID: 21300010, guid: 96bf37e027a12495cb0316eba30eb648, type: 3}
-  - {fileID: 21300000, guid: 96bf37e027a12495cb0316eba30eb648, type: 3}
-  - {fileID: 21300002, guid: 96bf37e027a12495cb0316eba30eb648, type: 3}
-  - {fileID: 21300004, guid: 96bf37e027a12495cb0316eba30eb648, type: 3}
-  - {fileID: 21300006, guid: 96bf37e027a12495cb0316eba30eb648, type: 3}
   enemyLocation: {fileID: 0}
 --- !u!61 &4680099898547559781
 BoxCollider2D:

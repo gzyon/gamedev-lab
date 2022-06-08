@@ -25,10 +25,32 @@ public class QuestionBoxController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.CompareTag("Player") && !hit){
+        if (col.gameObject.CompareTag("Player") &&  !hit){
             hit  =  true;
-            // spawn the mushroom prefab slightly above the box
-            Instantiate(consummablePrefab, new Vector3(this.transform.position.x, this.transform.position.y  +  1.0f, this.transform.position.z), Quaternion.identity);
+            // ensure that we move this object sufficiently 
+            rigidBody.AddForce(new  Vector2(0, rigidBody.mass*20), ForceMode2D.Impulse);
+            // spawn mushroom
+            Instantiate(consummablePrefab, new  Vector3(this.transform.position.x, this.transform.position.y  +  1.0f, this.transform.position.z), Quaternion.identity);
+            // begin check to disable object's spring and rigidbody
+            StartCoroutine(DisableHittable());
 	    }
+    }
+
+    bool  ObjectMovedAndStopped(){
+        return  Mathf.Abs(rigidBody.velocity.magnitude)<0.01;
+    }
+
+    IEnumerator  DisableHittable(){
+        if (!ObjectMovedAndStopped()){
+            yield  return  new  WaitUntil(() =>  ObjectMovedAndStopped());
+        }
+
+        //continues here when the ObjectMovedAndStopped() returns true
+        spriteRenderer.sprite  =  usedQuestionBox; // change sprite to be "used-box" sprite
+        rigidBody.bodyType  =  RigidbodyType2D.Static; // make the box unaffected by Physics
+
+        //reset box position
+        this.transform.localPosition  =  Vector3.zero;
+        springJoint.enabled  =  false; // disable spring
     }
 }

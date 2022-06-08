@@ -40,4 +40,8 @@ public class MushroomBehaviour : MonoBehaviour
             currentDirection *= -1;
         }
     }
+
+    void  OnBecameInvisible(){
+        Destroy(gameObject);	
+    }
 }
