@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 44962723}
   - component: {fileID: 44962722}
   - component: {fileID: 44962721}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Plane (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5970,7 +5970,7 @@ Camera:
   m_GameObject: {fileID: 258016269}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -6277,7 +6277,7 @@ Camera:
   m_GameObject: {fileID: 370020505}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -6395,7 +6395,7 @@ Camera:
   m_GameObject: {fileID: 433966787}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -6441,7 +6441,7 @@ GameObject:
   - component: {fileID: 437339365}
   - component: {fileID: 437339364}
   - component: {fileID: 437339363}
-  m_Layer: 9
+  m_Layer: 16
   m_Name: Plane (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6611,7 +6611,7 @@ Camera:
   m_GameObject: {fileID: 462909558}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -6790,7 +6790,7 @@ GameObject:
   - component: {fileID: 525030001}
   - component: {fileID: 525030000}
   - component: {fileID: 525029999}
-  m_Layer: 9
+  m_Layer: 15
   m_Name: Plane (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6888,7 +6888,7 @@ GameObject:
   - component: {fileID: 550642490}
   - component: {fileID: 550642489}
   - component: {fileID: 550642488}
-  m_Layer: 9
+  m_Layer: 11
   m_Name: Plane (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7058,7 +7058,7 @@ Camera:
   m_GameObject: {fileID: 554667938}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -7656,7 +7656,7 @@ GameObject:
   - component: {fileID: 881873020}
   - component: {fileID: 881873019}
   - component: {fileID: 881873018}
-  m_Layer: 9
+  m_Layer: 17
   m_Name: Plane (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8481,7 +8481,7 @@ Camera:
   m_GameObject: {fileID: 1122211615}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -8586,7 +8586,7 @@ GameObject:
   - component: {fileID: 1137451613}
   - component: {fileID: 1137451612}
   - component: {fileID: 1137451611}
-  m_Layer: 9
+  m_Layer: 14
   m_Name: Plane (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8936,7 +8936,7 @@ Camera:
   m_GameObject: {fileID: 1178113420}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -9054,7 +9054,7 @@ Camera:
   m_GameObject: {fileID: 1197722050}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -9555,7 +9555,7 @@ Camera:
   m_GameObject: {fileID: 1404268332}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -9745,7 +9745,7 @@ Camera:
   m_GameObject: {fileID: 1448343677}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
+  m_ClearFlags: 4
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
@@ -10129,7 +10129,7 @@ GameObject:
   - component: {fileID: 1699728844}
   - component: {fileID: 1699728843}
   - component: {fileID: 1699728842}
-  m_Layer: 9
+  m_Layer: 12
   m_Name: Plane (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10746,7 +10746,7 @@ GameObject:
   - component: {fileID: 1969863116}
   - component: {fileID: 1969863115}
   - component: {fileID: 1969863114}
-  m_Layer: 9
+  m_Layer: 13
   m_Name: Plane (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
