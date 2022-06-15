@@ -2,20 +2,39 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class Spawner : MonoBehaviour
 {
     // Start is called before the first frame update
-    float groundDistance = -1.0f;
+    static float groundDistance = -1.0f;
+    public static int maxEnemies = 5;
+
+    private static int enemiesSpawned;
     void Start()
     {
-        for (int j = 0; j < 5; j++)
+        for (int j = 0; j < 2; j++) {
             spawnFromPooler(ObjectType.greenEnemy);
+            enemiesSpawned++;
+        }
+        // for (int j = 0; j < 2; j++) {
+        //     spawnFromPooler(ObjectType.gombaEnemy);
+        // }
+    }
 
+    void Awake() {
+        // spawn two gombaEnemy
+        Debug.Log("spawner awake");
+        // for (int j =  0; j  <  2; j++)
+        //     spawnFromPooler(ObjectType.greenEnemy);
+        // for (int i = 0; i< 0; i++) 
+        //     spawnFromPooler(ObjectType.greenEnemy);    
+    }
+
+    public static int getNumEnemies() {
+        return enemiesSpawned;
     }
 
 
-    void spawnFromPooler(ObjectType i)
+    public static void spawnFromPooler(ObjectType i)
     {
         GameObject item = ObjectPooler.SharedInstance.GetPooledObject(i);
 
@@ -32,7 +51,7 @@ public class Spawner : MonoBehaviour
         }
     }
 
-    public void spawnNewEnemy()
+    public static void spawnNewEnemy()
     {
 
         ObjectType i = Random.Range(0, 2) == 0 ? ObjectType.gombaEnemy : ObjectType.greenEnemy;

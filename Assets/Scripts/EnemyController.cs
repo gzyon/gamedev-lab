@@ -12,10 +12,13 @@ public class EnemyController : MonoBehaviour
     private int moveRight = -1;
     private Vector2 velocity;
     private Rigidbody2D enemyBody;
+    private Animator animator;
+    private bool moveEnemy = true;
 
     void Start()
     {
         enemyBody = GetComponent<Rigidbody2D>();
+        animator = GetComponent<Animator>();
         Debug.Log("enemy moving");
         // get the starting position
         originalX = transform.position.x;
@@ -31,7 +34,9 @@ public class EnemyController : MonoBehaviour
     void OnTriggerEnter2D(Collider2D other) {
         if (other.gameObject.CompareTag("Player")) {
             Debug.Log("Goomba collided into mario");
-            enemyBody.GetComponent<EnemyController>().enabled = false;
+            moveEnemy = false;
+            animator.SetBool("marioDead", true);
+            // enemyBody.GetComponent<EnemyController>().enabled = false;
         }
     }
 
@@ -46,15 +51,20 @@ public class EnemyController : MonoBehaviour
 
     void Update()
     {
-        if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset) {
-            // move gomba
-            MoveGomba();
-        }
-        else {
-            // change direction
-            moveRight *= -1;
-            ComputeVelocity();
-            MoveGomba();
+        if (moveEnemy) {
+            if (Mathf.Abs(enemyBody.position.x - originalX) < maxOffset) {
+                // move gomba
+                MoveGomba();
+            }
+            else {
+                // change direction
+                moveRight *= -1;
+                ComputeVelocity();
+                MoveGomba();
+            }
+        } else {
+            enemyBody.velocity.Set(0, 0);
+            Debug.Log("enemy stop moving " + enemyBody.velocity);
         }
     }
     

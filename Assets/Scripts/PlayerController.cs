@@ -9,7 +9,7 @@ using UnityEngine.SceneManagement;
 public class PlayerController : MonoBehaviour
 {
 
-    private int score = 0;
+    private static int score = 0;
     private bool countScoreState = false;
     private Rigidbody2D marioBody;
     private SpriteRenderer marioSprite;
@@ -78,7 +78,7 @@ public class PlayerController : MonoBehaviour
     }
 
     void OnCollisionEnter2D(Collision2D col){
-        Debug.Log(col.gameObject.tag);
+        Debug.Log(col.gameObject);
         if(col.gameObject.CompareTag("Ground") || col.gameObject.CompareTag("Obstacle") || col.gameObject.CompareTag("PipeTop") || col.gameObject.CompareTag("QuestionBox")) {
             onGroundState = true;
             animator.SetBool("onGround", onGroundState);
@@ -94,7 +94,7 @@ public class PlayerController : MonoBehaviour
             Debug.Log("pushRight");
             // marioBody.AddForce(Vector2.right * pushForce, ForceMode2D.Impulse);
             marioBody.velocity = Vector2.zero;
-        }
+        } 
     }
 
 
@@ -119,24 +119,27 @@ public class PlayerController : MonoBehaviour
         	animator.SetTrigger("onSkid");
         }
 
-        // if(!onGroundState && countScoreState){
-        //     if(Mathf.Abs(transform.position.x - enemyLocation.position.x) < 0.5f){
-        //         countScoreState = false;
-        //         score++;
-        //         Debug.Log(score);
-        //     }
-        // }
     }
 
     void OnTriggerEnter2D(Collider2D other) {
+        Debug.Log("triggered");
         if (other.gameObject.CompareTag("Enemy")) {
-            jump.PlayOneShot(omona, 0.7F);
-            marioBody.velocity = Vector2.zero;
-            gameOverText.gameObject.SetActive(true);
-            restartButton.gameObject.SetActive(true);
-            marioBody.GetComponent<PlayerController>().enabled = false;
-            animator.enabled = false;
-        }
+            enemyLocation = other.transform;
+            if(Mathf.Abs(transform.position.x - enemyLocation.position.x) < 0.5f) {
+                // Debug.Log("jump on enemy");
+                other.gameObject.SetActive(false);
+                Spawner.spawnNewEnemy();
+            }
+            else {
+                gameObject.SetActive(false);
+                jump.PlayOneShot(omona, 0.7F);
+                marioBody.velocity = Vector2.zero;
+                gameOverText.gameObject.SetActive(true);
+                restartButton.gameObject.SetActive(true);
+                marioBody.GetComponent<PlayerController>().enabled = false;
+                animator.enabled = false;
+            }
+        } 
     }
 
     void PlayJumpSound()
@@ -144,4 +147,13 @@ public class PlayerController : MonoBehaviour
         Debug.Log("Mario jump");
         jump.PlayOneShot(impact, 0.7F);
     }
+
+    public static void addScore() {
+        score++;
+    }
+
+    public static void setScore(int newScore) {
+        score = newScore;
+    }
+
  }
