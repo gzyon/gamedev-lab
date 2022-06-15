@@ -100,6 +100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0d5fc16040ecbb045b0a281e960860d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  gameConstants: {fileID: 11400000, guid: 0781b001c390cb34096d4109eda8b16a, type: 2}
 --- !u!50 &8496502293725675771
 Rigidbody2D:
   serializedVersion: 4

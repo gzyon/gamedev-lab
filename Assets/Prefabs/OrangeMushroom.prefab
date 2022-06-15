@@ -13,8 +13,9 @@ GameObject:
   - component: {fileID: 7282806447061256200}
   - component: {fileID: 6306854219833085813}
   - component: {fileID: 5645822541970623883}
+  - component: {fileID: -7665131919534548316}
   m_Layer: 8
-  m_Name: ConsummableMushroomSimple
+  m_Name: OrangeMushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,3 +147,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 03b5a690c3e17484b8406d3b935a8625, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-7665131919534548316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243725676593161203}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba79987b91a6f2a4eabec200d9995651, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  t: {fileID: 2800000, guid: f651e213ba9ba904292d5896bdf21dbb, type: 3}

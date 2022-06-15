@@ -28,20 +28,5 @@ public class MushroomBehaviour : MonoBehaviour
         mushroomBody.MovePosition(nextPosition);
     }
 
-    void OnCollisionEnter2D(Collision2D other)
-    {
-        if (other.gameObject.CompareTag("Player")) {
-            // mushroomBody.velocity = Vector2.zero;
-            // Debug.Log(mushroomBody.velocity);
-            mushroomBody.gameObject.GetComponent<MushroomBehaviour>().enabled = false;
-        }
-        else if (other.gameObject.CompareTag("PipeBottom")) {
-            // Debug.Log("change direction");
-            currentDirection *= -1;
-        }
-    }
 
-    void  OnBecameInvisible(){
-        Destroy(gameObject);	
-    }
 }
