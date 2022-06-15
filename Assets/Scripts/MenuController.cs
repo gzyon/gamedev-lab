@@ -22,6 +22,12 @@ public class MenuController : MonoBehaviour
     }
 
     public void RestartButtonClicked() {
+      PlayerController.setScore(0);
+      foreach (Transform eachChild in transform) {
+        if (eachChild.name == "Mario") {
+          eachChild.gameObject.SetActive(true);
+        }
+      }
       SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
   }
 }

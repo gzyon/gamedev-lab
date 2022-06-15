@@ -45,6 +45,7 @@ public class ObjectPooler : MonoBehaviour
             for (int i = 0; i < item.amount; i++)
             {
                 // this 'pickup' a local variable, but Unity will not remove it since it exists in the scene
+                Debug.Log("Instantiating" + item.type);
                 GameObject pickup = (GameObject)Instantiate(item.prefab);
                 pickup.SetActive(false);
                 pickup.transform.parent = this.transform;
