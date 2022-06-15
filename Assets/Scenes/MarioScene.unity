@@ -11376,13 +11376,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToPool:
-  - amount: 1
+  - amount: 2
     prefab: {fileID: 5330746358341914082, guid: 0cc466dd695334543ad0e40a52601f61, type: 3}
-    expandPool: 1
+    expandPool: 0
     type: 0
-  - amount: 5
+  - amount: 3
     prefab: {fileID: 163463956497489299, guid: b8a9b854cd1e69743b037be7d816346a, type: 3}
-    expandPool: 1
+    expandPool: 0
     type: 1
 --- !u!4 &2127812011
 Transform:
