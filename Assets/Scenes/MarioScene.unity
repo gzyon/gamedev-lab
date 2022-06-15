@@ -11376,7 +11376,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   itemsToPool:
-  - amount: 0
+  - amount: 1
     prefab: {fileID: 5330746358341914082, guid: 0cc466dd695334543ad0e40a52601f61, type: 3}
     expandPool: 1
     type: 0
@@ -11392,7 +11392,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2127812009}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.0823368, y: 2.8748918, z: -10.066599}
+  m_LocalPosition: {x: -4.95, y: -0.97, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
