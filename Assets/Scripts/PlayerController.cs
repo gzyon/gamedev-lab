@@ -163,8 +163,6 @@ public class PlayerController : MonoBehaviour
         // ...
         jump.PlayOneShot(omona, 0.7F);
         marioBody.velocity = Vector2.zero;
-        gameOverText.gameObject.SetActive(true);
-        restartButton.gameObject.SetActive(true);
         marioBody.GetComponent<PlayerController>().enabled = false;
         gameObject.SetActive(false);
         animator.enabled = false;

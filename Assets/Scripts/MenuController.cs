@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-
 public class MenuController : MonoBehaviour
 {
     void Awake()
@@ -25,14 +24,4 @@ public class MenuController : MonoBehaviour
         }
     }
 
-    public void RestartButtonClicked() {
-      PlayerController.setScore(0);
-      foreach (Transform eachChild in transform) {
-        Debug.Log("here xxx" + eachChild.name);
-        if (eachChild.name == "Mario") {
-          eachChild.gameObject.SetActive(true);
-        }
-      }
-      SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
-  }
 }
