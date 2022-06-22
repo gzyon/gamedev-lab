@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2049299011809155196}
   - component: {fileID: 3942124420140817544}
   - component: {fileID: 152578582124026670}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedMushroomEV
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -103,12 +103,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!61 &2049299011809155196
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a30bd2569c4835f478acbb9687591c20, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  stats: {fileID: 11400000, guid: 59b5181a3f4a9944f94018772f6b0c40, type: 2}
+  stats: {fileID: 11400000, guid: 5d017d61ae283ec43b9ae0a9407aa874, type: 2}
   onCollected:
     m_PersistentCalls:
       m_Calls:
@@ -168,7 +168,7 @@ MonoBehaviour:
         m_MethodName: Raise
         m_Mode: 2
         m_Arguments:
-          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgument: {fileID: 11400000, guid: 5d017d61ae283ec43b9ae0a9407aa874, type: 2}
           m_ObjectArgumentAssemblyTypeName: Powerup, Assembly-CSharp
           m_IntArgument: 0
           m_FloatArgument: 0

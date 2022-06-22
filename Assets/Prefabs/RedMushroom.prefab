@@ -15,13 +15,13 @@ GameObject:
   - component: {fileID: -1876526307014392867}
   - component: {fileID: -6237770602532676373}
   - component: {fileID: -2731636058858110580}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RedMushroom
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &3508716085239631093
 Transform:
   m_ObjectHideFlags: 0
