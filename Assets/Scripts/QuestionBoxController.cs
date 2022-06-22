@@ -25,6 +25,7 @@ public class QuestionBoxController : MonoBehaviour
     }
     void OnCollisionEnter2D(Collision2D col)
     {
+        Debug.Log("question box collision: " + col.gameObject);
         if (col.gameObject.CompareTag("Player") &&  !hit){
             hit  =  true;
             // ensure that we move this object sufficiently 

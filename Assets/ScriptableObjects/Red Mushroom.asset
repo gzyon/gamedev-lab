@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05aa399879dc914fb40e6c7cd04c365, type: 3}
+  m_Name: Red Mushroom
+  m_EditorClassIdentifier: 
+  DeveloperDescription: Stats for Red Mushroom Powerup
+  index: 1
+  powerupTexture: {fileID: 2800000, guid: f651e213ba9ba904292d5896bdf21dbb, type: 3}
+  aboluteSpeedBooster: 0
+  absoluteJumpBooster: 10
+  duration: 5

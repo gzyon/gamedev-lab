@@ -127,6 +127,7 @@ GameObject:
   - component: {fileID: 4388988184111157067}
   - component: {fileID: 4388988184111157066}
   - component: {fileID: 4710438542195518822}
+  - component: {fileID: 3056956074212579845}
   m_Layer: 7
   m_Name: EdgeDetector
   m_TagString: Untagged
@@ -261,7 +262,7 @@ SpringJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 0, y: -2.0130491}
+  m_ConnectedAnchor: {x: 0, y: -2.013048}
   m_AutoConfigureDistance: 1
   m_Distance: 0.005
   m_DampingRatio: 1
@@ -283,3 +284,29 @@ MonoBehaviour:
   consummablePrefab: {fileID: 6243725676593161203, guid: 8bfae9464f4a5b447ad508b39e458794, type: 3}
   spriteRenderer: {fileID: 4388988184111157065}
   usedQuestionBox: {fileID: 21300054, guid: 855dc7396df3c4e49ac4d21234eac5e1, type: 3}
+--- !u!61 &3056956074212579845
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4388988184111157068}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0

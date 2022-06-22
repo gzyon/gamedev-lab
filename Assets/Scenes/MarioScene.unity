@@ -972,7 +972,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 7c4da7808f8f91444bfe85c2a51ba205, type: 2}
     - target: {fileID: 4388988184111157065, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4388988184111157065, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_SortingLayerID
@@ -1053,6 +1053,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefab: {fileID: 6370214481590923753, guid: a8bb8f909d4d3c1429d7a46a6c4683e4, type: 3}
   broken: 0
+  onBreakBrick:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: c2805946d9850814bb7173f35ca0218f, type: 2}
+        m_TargetAssemblyTypeName: GameEvent, Assembly-CSharp
+        m_MethodName: Raise
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!68 &253495126
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -1289,6 +1304,116 @@ Camera:
   m_OcclusionCulling: 0
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
+--- !u!1 &325166607
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 325166610}
+  - component: {fileID: 325166609}
+  - component: {fileID: 325166608}
+  m_Layer: 0
+  m_Name: PowerupManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &325166608
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325166607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b21edd4d76088149a11eada2ca89106, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: 9a003e2e489e6894d96ae8972334cf81, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 325166609}
+        m_TargetAssemblyTypeName: PowerupManagerEV, Assembly-CSharp
+        m_MethodName: AddPowerup
+        m_Mode: 2
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: Powerup, Assembly-CSharp
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!114 &325166609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325166607}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c3b663671e11804dbec9251f5520423, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marioJumpSpeed: {fileID: 11400000, guid: a75a9afddb9f0cc46876525ff0d9c7b7, type: 2}
+  marioMaxSpeed: {fileID: 11400000, guid: 733c702dacb4af8408d08cc7d42ecd15, type: 2}
+  powerupInventory: {fileID: 11400000, guid: f7dba37dd6822994fbb5a7fe16dc7f3a, type: 2}
+  powerupIcons:
+  - {fileID: 6243725676593161203, guid: 8bfae9464f4a5b447ad508b39e458794, type: 3}
+  - {fileID: 1393856381093548722, guid: 8fb4e952bfd3f6c459950bda3726e45d, type: 3}
+--- !u!4 &325166610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 325166607}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &329328185
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 329328186}
+  m_Layer: 0
+  m_Name: RedMushroomEV
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &329328186
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 329328185}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 18
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &338554235
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2842,7 +2967,7 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 7c4da7808f8f91444bfe85c2a51ba205, type: 2}
     - target: {fileID: 4388988184111157065, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4388988184111157065, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_SortingLayerID
@@ -4768,6 +4893,7 @@ GameObject:
   - component: {fileID: 1289117471}
   - component: {fileID: 1289117473}
   - component: {fileID: 1289117472}
+  - component: {fileID: 1289117474}
   m_Layer: 5
   m_Name: Score
   m_TagString: Untagged
@@ -4837,6 +4963,20 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1289117470}
   m_CullTransparentMesh: 0
+--- !u!114 &1289117474
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1289117470}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ed233a014a0f3a41831667042e1e8aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  marioScore: {fileID: 11400000, guid: 95cf851d59304f74b9049262ed2cfb54, type: 2}
+  text: {fileID: 1289117472}
 --- !u!1 &1299010795
 GameObject:
   m_ObjectHideFlags: 0
@@ -5037,6 +5177,78 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4136429495925494406, guid: e8d54b439a257254bbb861f3de9649be, type: 3}
   m_PrefabInstance: {fileID: 1319618641}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1367769661
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1367769663}
+  - component: {fileID: 1367769662}
+  m_Layer: 0
+  m_Name: ScoreEventListener
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1367769662
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367769661}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d308ca0dacf5c544846aa214f2c1bd7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Event: {fileID: 11400000, guid: c2805946d9850814bb7173f35ca0218f, type: 2}
+  Response:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000, guid: 95cf851d59304f74b9049262ed2cfb54, type: 2}
+        m_TargetAssemblyTypeName: IntVariable, Assembly-CSharp
+        m_MethodName: ApplyChange
+        m_Mode: 3
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 1
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1289117474}
+        m_TargetAssemblyTypeName: ScoreMonitor, Assembly-CSharp
+        m_MethodName: UpdateScore
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+--- !u!4 &1367769663
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1367769661}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3, z: -10}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 17
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1404268332
 GameObject:
   m_ObjectHideFlags: 0
@@ -6121,6 +6333,37 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   changeSceneSound: {fileID: 1748830747}
+--- !u!1 &1763769635 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4388988184111157068, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
+  m_PrefabInstance: {fileID: 844156758}
+  m_PrefabAsset: {fileID: 0}
+--- !u!61 &1763769639
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763769635}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 1}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!1001 &1824778890
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7068,15 +7311,19 @@ PrefabInstance:
       objectReference: {fileID: 6200000, guid: 7c4da7808f8f91444bfe85c2a51ba205, type: 2}
     - target: {fileID: 4388988184111157065, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_SortingLayer
-      value: 2
+      value: -2
       objectReference: {fileID: 0}
     - target: {fileID: 4388988184111157065, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_SortingLayerID
       value: 55999227
       objectReference: {fileID: 0}
     - target: {fileID: 4388988184111157066, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
+      propertyPath: m_ConnectedAnchor.x
+      value: -0.3000002
+      objectReference: {fileID: 0}
+    - target: {fileID: 4388988184111157066, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_ConnectedAnchor.y
-      value: -2.0130491
+      value: -1.3000011
       objectReference: {fileID: 0}
     - target: {fileID: 4388988184111157069, guid: 4b960343d4469034ba2234a1a4f00d28, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7284,34 +7531,6 @@ PrefabInstance:
     - target: {fileID: 4680099898547559778, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
       propertyPath: m_Constraints
       value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: gravity
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: scoreText
-      value: 
-      objectReference: {fileID: 1289117472}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: linearDrag
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: gameOverText
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: enemyLocation
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: restartButton
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 4680099898547559779, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
-      propertyPath: fallMultiplier
-      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 4680099898547559790, guid: 2f982b6df5536a043a4b8de1733d21be, type: 3}
       propertyPath: m_Name

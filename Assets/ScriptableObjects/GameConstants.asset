@@ -12,6 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f1dcb6d3ec12a740abe0045b2916680, type: 3}
   m_Name: GameConstants
   m_EditorClassIdentifier: 
+  playerStartingMaxSpeed: 5
+  playerMaxJumpSpeed: 15
+  playerDefaultForce: 150
   consumeTimeStep: 10
   consumeLargestScale: 4
   breakTimeStep: 30

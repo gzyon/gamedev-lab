@@ -3,6 +3,10 @@ using UnityEngine;
 [CreateAssetMenu(fileName =  "GameConstants", menuName =  "ScriptableObjects/GameConstants", order =  1)]
 public  class GameConstants : ScriptableObject
 {
+    public int playerStartingMaxSpeed = 5;
+    public int playerMaxJumpSpeed = 30;
+    public int playerDefaultForce = 150;
+
     // for Scoring system
     int currentScore;
     int currentPlayerHealth;
